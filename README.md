@@ -1,4 +1,4 @@
-**TuPrimeraPagina_Acosta
+TuPrimeraPagina_Acosta
 
  Este proyecto implementa una web tipo Blog utilizando el patrón MVT (Modelo-Vista-Template).
 
