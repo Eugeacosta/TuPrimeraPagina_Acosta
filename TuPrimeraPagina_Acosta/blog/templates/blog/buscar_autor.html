@@ -1,0 +1,23 @@
+{% extends "blog/padre.html" %}
+
+{% block contenidoQueCambia %}
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card text-center">
+                <div class="card-header">
+                    Búsqueda
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Buscar Autor</h5>
+                    <p class="card-text">Ingresa el nombre del autor que deseas encontrar.</p>
+                    
+                    <form action="" method="POST" class="d-flex justify-content-center gap-2">
+                        {% csrf_token %}
+                        {{ mi_formulario.as_p }}
+                        <button type="submit" class="btn btn-success">Buscar 🔍</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

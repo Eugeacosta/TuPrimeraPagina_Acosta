@@ -1,0 +1,25 @@
+{% extends "blog/padre.html" %}
+
+{% block contenidoQueCambia %}
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Bienvenido al Blog</h1>
+            <p class="col-md-8 fs-4">Este es el proyecto final usando Django y el patrón MVT.</p>
+            
+            {% if mensaje %}
+                <div class="alert alert-success mt-3" role="alert">
+                    {{ mensaje }}
+                </div>
+            {% endif %}
+            
+            <hr>
+            <h3>¿Qué deseas hacer?</h3>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="{% url 'CrearAutor' %}" class="btn btn-primary btn-lg px-4 me-md-2">Crear Autor</a>
+                <a href="{% url 'CrearPost' %}" class="btn btn-outline-secondary btn-lg px-4">Escribir Post</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
